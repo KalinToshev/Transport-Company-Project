@@ -1,0 +1,4 @@
+id;company;client;vehicle;driver;from;to;departure;arrival;price;paid;cargoDescription;cargoWeight
+1;TransCo Sofia;ACME Ltd;CB1234AB;Ivan Petrov;Sofia;Varna;2025-12-28T08:00;2025-12-28T14:30;1500.00;true;Passengers: school trip;0.0
+3;TransCo Sofia;ACME Ltd;CB5555EF;Stoyan Stoyanov;Sofia;Ruse;2025-12-28T07:30;2025-12-28T11:45;900.00;true;Pallets of paper;800.0
+2;CargoPlovdiv;Globex Corp;PB9876CD;Georgi Ivanov;Plovdiv;Burgas;2025-12-28T09:15;2025-12-28T16:30;2400.00;true;Pallets of electronics;3200.0

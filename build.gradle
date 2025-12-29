@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.informatics'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.hibernate.orm:hibernate-core:7.1.8.Final")
+    implementation("org.postgresql:postgresql:42.7.8")
+
+    implementation("org.hibernate.validator:hibernate-validator:8.0.1.Final")
+    implementation("org.hibernate.validator:hibernate-validator-annotation-processor:8.0.1.Final")
+    implementation("org.glassfish.expressly:expressly:5.0.0")
+
+    compileOnly("org.projectlombok:lombok:1.18.42")
+    annotationProcessor("org.projectlombok:lombok:1.18.42")
+
+    testCompileOnly("org.projectlombok:lombok:1.18.42")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    testImplementation 'com.h2database:h2:2.2.224'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
+

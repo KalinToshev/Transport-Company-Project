@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/main/java/org/informatics/transportcompany/model/Client.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/informatics/transportcompany/model/Client.java" />
+              <option name="originalContent" value="package org.informatics.transportcompany.model;&#10;&#10;import jakarta.persistence.Column;&#10;import jakarta.persistence.Entity;&#10;import jakarta.persistence.FetchType;&#10;import jakarta.persistence.GeneratedValue;&#10;import jakarta.persistence.GenerationType;&#10;import jakarta.persistence.Id;&#10;import jakarta.persistence.JoinColumn;&#10;import jakarta.persistence.ManyToOne;&#10;import jakarta.persistence.Table;&#10;import jakarta.validation.constraints.NotBlank;&#10;import jakarta.validation.constraints.NotNull;&#10;import jakarta.validation.constraints.Size;&#10;import lombok.Getter;&#10;import lombok.NoArgsConstructor;&#10;import lombok.Setter;&#10;&#10;@Entity&#10;@Table(name = &quot;clients&quot;)&#10;@NoArgsConstructor&#10;@Getter&#10;@Setter&#10;public class Client {&#10;&#10;    @Id&#10;    @GeneratedValue(strategy = GenerationType.IDENTITY)&#10;    private Long id;&#10;&#10;    @NotBlank(message = &quot;Client name is required.&quot;)&#10;    @Size(max = 100, message = &quot;Client name cannot be longer than 100 characters.&quot;)&#10;    @Column(nullable = false)&#10;    private String name;&#10;&#10;    @Size(max = 255, message = &quot;Contact details cannot be longer than 255 characters.&quot;)&#10;    private String contactDetails;&#10;&#10;    @NotNull(message = &quot;Client must be associated with a transport company.&quot;)&#10;    @ManyToOne(optional = false, fetch = FetchType.LAZY)&#10;    @JoinColumn(name = &quot;company_id&quot;)&#10;    private TransportCompany company;&#10;}&#10;" />
+              <option name="updatedContent" value="package org.informatics.transportcompany.model;&#10;&#10;import jakarta.persistence.Column;&#10;import jakarta.persistence.Entity;&#10;import jakarta.persistence.FetchType;&#10;import jakarta.persistence.GeneratedValue;&#10;import jakarta.persistence.GenerationType;&#10;import jakarta.persistence.Id;&#10;import jakarta.persistence.JoinColumn;&#10;import jakarta.persistence.ManyToOne;&#10;import jakarta.persistence.Table;&#10;import jakarta.validation.constraints.NotBlank;&#10;import jakarta.validation.constraints.NotNull;&#10;import jakarta.validation.constraints.Size;&#10;import lombok.Getter;&#10;import lombok.NoArgsConstructor;&#10;import lombok.Setter;&#10;&#10;@Entity&#10;@Table(name = &quot;clients&quot;)&#10;@NoArgsConstructor&#10;@Getter&#10;@Setter&#10;public class Client {&#10;&#10;    @Id&#10;    @GeneratedValue(strategy = GenerationType.IDENTITY)&#10;    private Long id;&#10;&#10;    @NotBlank(message = &quot;Client name is required.&quot;)&#10;    @Size(max = 100, message = &quot;Client name cannot be longer than 100 characters.&quot;)&#10;    @Column(nullable = false)&#10;    private String name;&#10;&#10;    @Size(max = 255, message = &quot;Contact details cannot be longer than 255 characters.&quot;)&#10;    private String contactDetails;&#10;&#10;    @NotNull(message = &quot;Client must be associated with a transport company.&quot;)&#10;    @ManyToOne(optional = false, fetch = FetchType.LAZY)&#10;    @JoinColumn(name = &quot;company_id&quot;)&#10;    private TransportCompany company;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

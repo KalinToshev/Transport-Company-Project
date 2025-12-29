@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: transport-company-db
+    environment:
+      POSTGRES_DB: transport_company_db
+      POSTGRES_USER: tc_user
+      POSTGRES_PASSWORD: tc_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
